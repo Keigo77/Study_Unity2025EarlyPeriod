@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class Practice : MonoBehaviour
 {
-    float area;
-    float inputRadius = 2.0f;
+    Vector3 enemyPosition;
     
     void Start()
     {
-        Debug.Log("面積を計算します");
-        area = CalculateArea(inputRadius);
-        Debug.Log(area);
+        enemyPosition = GetEnemyPosition("ピカチウ");
+        Debug.Log(enemyPosition);
     }
 
-    float CalculateArea(float radius)
+    Vector3 GetEnemyPosition(string enemyName)
     {
-        return radius * radius * 3.14f;
+        if (enemyName == "ピカチュウ")
+        {
+            return new Vector3(3.6f, -21.6f, 9.7f);
+        } 
+        else if (enemyName == "ニャース")
+        {
+            return new Vector3(-1.0f, 9.3f, 5.2f);
+        }
+        else
+        {
+            return new Vector3(0.0f, 0.0f, 0.0f);
+        }
     }
 }
