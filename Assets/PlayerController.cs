@@ -12,15 +12,15 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // 左矢印が押された時
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            this.transform.Translate(-3, 0, 0);     // 左に「3」動かす
+            this.transform.Translate(-0.05f, 0, 0);     // 左に「3」動かす
         }
 
         // 右矢印が押された時
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            this.transform.Translate(3, 0, 0);      // 右に「3」動かす
+            this.transform.Translate(0.05f, 0, 0);      // 右に「3」動かす
         }
     }
 }
