@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    Rigidbody2D playerRB;
+    
     void Start()
     {
         Application.targetFrameRate = 60;
+        playerRB = this.GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -14,13 +17,18 @@ public class PlayerController : MonoBehaviour
         // 左矢印が押された時
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            this.transform.Translate(-0.05f, 0, 0);     // 左に「3」動かす
+            playerRB.velocity = new Vector2(-3, 0);      // 速度移動に変更
         }
 
         // 右矢印が押された時
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            this.transform.Translate(0.05f, 0, 0);      // 右に「3」動かす
+            playerRB.velocity = new Vector2(3, 0);      // 速度移動に変更
+        }
+
+        if (Input.GetKey(KeyCode.LeftArrow) == false && Input.GetKey(KeyCode.RightArrow) == false)
+        {
+            playerRB.velocity = new Vector2(0, 0);
         }
     }
 }
