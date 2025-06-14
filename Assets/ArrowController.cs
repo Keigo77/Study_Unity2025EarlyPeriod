@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ArrowController : MonoBehaviour
 {
+    // D問題
+    AudioSource audioSource;    // AudioSource型の変数
+    public AudioClip Se;        // AudioClip型の変数．ここに.mp3をアサインする
+    
     void Update()
     {
         // 1フレームごとに0.1ずつ落ちていく
@@ -25,6 +29,9 @@ public class ArrowController : MonoBehaviour
             // 監督スクリプトに，プレイヤーと衝突したことを伝える
             GameObject director = GameObject.Find("GameDirector");
             director.GetComponent<GameDirector>().DecreaseHP();
+            // 効果音を鳴らすため，AudioSourceを取得
+            audioSource = collision.GetComponent<AudioSource>();
+            audioSource.PlayOneShot(Se);
             
             Destroy(this.gameObject);
         }
