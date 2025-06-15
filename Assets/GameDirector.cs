@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +11,17 @@ public class GameDirector : MonoBehaviour
     public GameObject heartImage1;
     public GameObject heartImage2;
     public GameObject heartImage3;
+    // E問題
+    public TextMeshProUGUI _timeText;
+    float delta = 0;
 
+    // E問題
+    void Update()
+    {
+        delta += Time.deltaTime;
+        _timeText.text = $"Time: {delta}";
+    }
+    
     public void DecreaseHP()
     {
         life--;
