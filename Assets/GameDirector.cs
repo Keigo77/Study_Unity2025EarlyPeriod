@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameDirector : MonoBehaviour
@@ -13,7 +14,7 @@ public class GameDirector : MonoBehaviour
     public GameObject heartImage3;
     // E問題
     public TextMeshProUGUI _timeText;
-    float delta = 0;
+    public static float delta = 0;
 
     // E問題
     void Update()
@@ -36,6 +37,10 @@ public class GameDirector : MonoBehaviour
         else if (life == 0)
         {
             heartImage1.SetActive(false);
+        }
+        else if (life == -1)
+        {
+            SceneManager.LoadScene("Result");
         }
     }
 }
