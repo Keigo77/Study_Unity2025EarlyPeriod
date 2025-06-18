@@ -13,6 +13,11 @@ public class GameDirector : MonoBehaviour
     public TextMeshProUGUI _timeText;
     public static float delta = 0;
 
+    void Start()
+    {
+        delta = 0;   
+    }
+
     // E問題
     void Update()
     {
