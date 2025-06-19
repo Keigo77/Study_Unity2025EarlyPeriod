@@ -1174,8 +1174,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 71}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0.7739, y: 71}
+  m_SizeDelta: {x: 187.6173, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1219883611
 MonoBehaviour:
@@ -1445,6 +1445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 4159958172688570022, guid: 151fa91a8b3e247d7aad344ad3bc6b81, type: 3}
+  orangePrefab: {fileID: 2299137110252695328, guid: a97d5f682a9b94cccafb5e46ab3b07a2, type: 3}
   span: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
